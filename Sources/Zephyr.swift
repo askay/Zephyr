@@ -315,7 +315,7 @@ private extension Zephyr {
             defaults.set(value, forKey: key)
             Zephyr.printKeySyncStatus(key: key, value: value, destination: .local)
         } else {
-            defaults.set(nil, forKey: key)
+            defaults.removeObject(forKey: key)
             Zephyr.printKeySyncStatus(key: key, value: nil, destination: .local)
         }
 
